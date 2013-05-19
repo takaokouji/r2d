@@ -1,38 +1,37 @@
 # R2D: 2D Graphics for Ruby
 
-R2D is a gem for drawing 2D graphics, animations, playing audio, capturing input, and more.
+R2Dはを描画(2次元)、アニメーション、オーディオの再生・録音などを行うRubyのライブラリです。
 
-# Contributing
+# プロジェクトへのフィードバック
 
-This library is in **very early development**, which means the design direction, implementation, and final API spec is still in flux. Please [contact me](https://twitter.com/blacktm) or open an issue *before* sending a pull request.
+本ライブラリはまだまだできたての開発版です。このため、プロジェクトのゴール、実装、APIが定まっていません。GitHubのpullリクエスト(本ライブラリの修正点)を送る前に [私に連絡する](https://twitter.com/blacktm) か、GitHubのissue(問題の報告)をしてください。
 
-[View the Roadmap](https://github.com/blacktm/r2d/wiki/Roadmap) in the wiki.
+[本ライブラリのロードマップを確認する。](https://github.com/blacktm/r2d/wiki/Roadmap)
 
-# Installing
+# インストール方法
 
-Until a v0.1.0 release, this gem will only be available locally. To build and install the gem, use:
+v0.1.0がリリースされるまでは本ライブラリはソースコードからインストールする必要があります。本ライブラリをビルド・インストールするには、Gitコマンドを使ってソースコードをcloneしたディレクトリしたディレクトリで次のコマンドを実行します(ruby 2.0.0-p0以降が必要です):
 
 ```
 $ gem build r2d.gemspec
 $ gem install --local r2d-0.0.0.gem
 ```
 
-# A Simple R2D Application
+# 最初のR2Dアプリケーション
 
 ```ruby
 require 'r2d'
 
-# Configure and initialize the window
 window width: 640, height: 480
-
-# Create a shape and add it to the window
 r = Rectangle.new(0, 0, 100, 100, "blue")
-
-# Show the window
 window :show
 ```
 
-Read the reference below to learn about all the things you can do with R2D. See the [examples](/examples) directory for more sample applications.
+このプログラムは、以下のことを行います。
+* 背景が黒で640x480のウインドウを表示する。
+* 青で塗りつぶした(0,0)-(100,100)の矩形を描画する。
+
+下記のリファレンスで、R2Dができることの全てを説明しています。また、ソースコードの [examples](/examples) ディレクトリにサンプルアプリケーションがあります。
 
 <!-- TODO: Add note about what `method/=` means -->
 
