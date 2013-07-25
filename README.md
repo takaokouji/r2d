@@ -35,25 +35,25 @@ window :show
 
 <!-- TODO: Add note about what `method/=` means -->
 
-# Basic Drawing
+# 基本的な描画処理
 
-## Common Parameters
+## 共通の引数
 
 ```
-x = an 'x'  coordinate (Integer)
-y = an 'y'  coordinate (Integer)
-s = the size    (Integer)
-w = the width   (Integer)
-h = the height  (Integer)
+x = X(横)軸 (Integer)
+y = Y(縦)軸 (Integer)
+s = サイズ  (Integer)
+w = 幅 (Integer)
+h = 高さ (Integer)
 
-c = the color  (String)
-or...
+c = 色 (String)
+または、
 c = [r, g, b, a] (Array)
-  where elements are 0..255 (Integer) or 0.0..1.0 (Float)
-    r = red
-    g = green
-    b = blue
-    a = alpha
+  r, g, b, aの各値は0..255 (Integer) または 0.0..1.0 (Float)
+    r = 赤
+    g = 緑
+    b = 青
+    a = 透明度
 ```
 
 ## Common Instance Methods
