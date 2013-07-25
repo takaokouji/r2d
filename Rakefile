@@ -15,7 +15,7 @@ task :build do
   print "done!\n"
   
   print "Installing gem..."
-  `gem install --local r2d-0.0.0.gem`
+  `gem install --local *.gem`
   print "done!\n\n"
   
 end

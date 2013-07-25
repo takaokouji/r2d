@@ -6,8 +6,10 @@ module R2D
     attr_accessor :w, :h, :title, :bg, :cursor, :fs
     attr_reader :objects, :on_keys, :keys_down, :update_proc
     
-    def initialize(w: 640, h: 480, title: "R2D", bg: nil, cursor: true, fs: false)
-      @w, @h, @title, @bg, @cursor, @fs, = w, h, title, bg, cursor, fs
+    def initialize(options = {})
+      options = options.merge({w: 640, h: 480, title: "R2D", bg: nil, cursor: true, fs: false})
+      @w, @h, @title, @bg, @cursor, @fs, =
+        options[:w], options[:h], options[:title], options[:bg], options[:cursor], options[:fs]
       
       @objects = []
       @on_keys = {}

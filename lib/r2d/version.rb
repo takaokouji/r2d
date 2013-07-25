@@ -1,5 +1,5 @@
 # version.rb
 
 module R2D
-  VERSION = '0.0.0'
+  VERSION = '0.0.0.0'
 end
