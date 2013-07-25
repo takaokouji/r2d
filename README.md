@@ -56,15 +56,15 @@ c = [r, g, b, a] (Array)
     a = 透明度
 ```
 
-## Common Instance Methods
+## 共通のインスタンスメソッド
 
-All objects that can be drawn have the methods:
+全てのオブジェクトは以下のメソッドを持ちます:
 
 ```
 add, remove, show, hide
 ```
 
-`add` and `show`, along with `remove` and `hide` are aliased.
+`add` と `show`, また `remove` と `hide` はエイリアス(別の名前だが処理は同じもの)です。
 
 ## Shapes
 
