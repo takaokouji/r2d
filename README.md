@@ -66,23 +66,23 @@ add, remove, show, hide
 
 `add` と `show`, また `remove` と `hide` はエイリアス(別の名前だが処理は同じもの)です。
 
-## Shapes
+## 形状
 
-### Squares
+### 正方形
 
-Parameters:
+引数:
 
 ```
 x, y, size, color="white", visible=true
 ```
 
-Instance methods:
+インスタンスメソッド:
 
 ```
 x/=, y/=, size=, color=
 ```
 
-Examples:
+例:
 
 ```ruby
 s = Square.new(x, y, size)
@@ -95,21 +95,21 @@ s.color = "red"
 s.color = [250, 0, 0, 100]
 ```
 
-### Rectangles
+### 長方形
 
-Parameters:
+引数:
 
 ```
 x, y, width, height, color="white", visible=true
 ```
 
-Instance methods:
+インスタンスメソッド:
 
 ```
 x/=, y/=, width/=, height/=, color=
 ```
 
-Examples:
+例:
 
 ```ruby
 r = Rectangle.new(x, y, width, height)
@@ -123,21 +123,21 @@ r.color = "blue"
 r.color = [0, 0, 255, 150]
 ```
 
-### Quadrilaterals
+### 四角形([Quadrilaterals](http://ja.wikipedia.org/wiki/%E5%9B%9B%E8%A7%92%E5%BD%A2))
 
-Parameters:
+引数:
 
 ```
 x1, y1, x2, y2, x3, y3, x4, y4, color="white", visible=true
 ```
 
-Instance methods:
+インスタンスメソッド:
 
 ```
 x1/=, y1/=, x2/=, y2/=, x3/=, y3/=, x4/=, y4/=, color=
 ```
 
-Examples:
+例:
 
 ```ruby
 q = Quad.new(x1, y1, x2, y2, x3, y3, x4, y4)
@@ -149,21 +149,21 @@ q.color = "blue"
 q.color = [0, 0, 255, 150]
 ```
 
-### Triangles
+### 三角形
 
-Parameters:
+引数:
 
 ```
 x1, y1, x2, y2, x3, y3, color="white", visible=true
 ```
 
-Instance methods:
+インスタンスメソッド:
 
 ```
 x1/=, y1/=, x2/=, y2/=, x3/=, y3/=, color=
 ```
 
-Examples:
+例:
 
 ```ruby
 t = Triangle.new(x1, y1, x2, y2, x3, y3)
@@ -176,15 +176,15 @@ t.color = [0, 0, 255, 1]
 ```
 
 <!--
-### Lines
+### 線
 
-Parameters:
+引数:
 
 ```
 x1, y1, x2, y2, color="white", visible=true
 ```
 
-Examples:
+例:
 
 ```ruby
 l = Line.new(x1, y1, x2, y2, w)
@@ -238,7 +238,7 @@ All gradient methods take a Hash where keys refer to the corners of the shape, a
 :top_left, :top_right, :bottom_left, :bottom_right
 ```
 
-Examples:
+例:
 
 ```ruby
 r.gradient = {
@@ -265,7 +265,7 @@ r.gradient = {
 :first, :second, :third, :fourth
 ```
 
-Examples:
+例:
 
 ```ruby
 q.gradient = {
@@ -286,7 +286,7 @@ The triangle gradient method takes a Hash containing keys (symbols) referring to
 :first, :second, :third
 ```
 
-Examples:
+例:
 
 ```ruby
 t.gradient = {
@@ -307,7 +307,7 @@ The line gradient method takes a Hash containing keys (symbols) referring to the
 :start, :end
 ```
 
-Examples:
+例:
 
 ```ruby
 l.gradient = {
@@ -321,19 +321,19 @@ l.gradient = {
 
 Formats supported: BMP, PNG, JPG.
 
-Parameters:
+引数:
 
 ```
 x, y, "path_to_image", visible=true
 ```
 
-Instance methods:
+インスタンスメソッド:
 
 ```
 x, y, width/=, height/=
 ```
 
-Examples:
+例:
 
 ```ruby
 img = Image.new(x, y, "ruby.png")
@@ -347,19 +347,19 @@ img.height  # returns height
 
 ## Text
 
-Parameters:
+引数:
 
 ```
 x, y, h, "content", c="white", visible=true
 ```
 
-Instance methods:
+インスタンスメソッド:
 
 ```
 x/=, y/=, content=, color=
 ```
 
-Examples:
+例:
 
 ```ruby
 t = Text.new(x, y, 20, "hello world")
@@ -377,19 +377,19 @@ Formats include: MP3, AAC, WAV.
 
 These are long audio clips.
 
-Parameters:
+引数:
 
 ```
 "path_to_song", volume=10
 ```
 
-Instance methods:
+インスタンスメソッド:
 
 ```
 play, playing?, pause, paused?, stop, loop
 ```
 
-Examples:
+例:
 
 ```ruby
 s = Song.new("media/track.mp3")
@@ -410,19 +410,19 @@ s.loop
 
 Sounds are short audio clips kept in memory.
 
-Parameters:
+引数:
 
 ```
 "path_to_sound", volume=10
 ```
 
-Instance methods:
+インスタンスメソッド:
 
 ```
 play, playing?, pause, paused?, stop, loop
 ```
 
-Examples:
+例:
 
 ```ruby
 s = Sound.new("media/snare.mp3")
@@ -551,7 +551,7 @@ update do
 end
 ```
 
-Examples:
+例:
 
 ```ruby
 update do
